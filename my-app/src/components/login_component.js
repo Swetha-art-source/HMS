@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -24,7 +24,7 @@ export default function Login() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "userRegister");
-        if (data.status == "ok") {
+        if (data.status === "ok") {
           alert("login successful");
           window.localStorage.setItem("token", data.data);
           window.localStorage.setItem("loggedIn", true);
@@ -35,10 +35,15 @@ export default function Login() {
   }
 
   return (
+    <div className="container">
+      <div>
+      <img src="https://res.cloudinary.com/dusm4h6cn/image/upload/v1692860408/Screenshot_2023-08-24_122931_vbhmfx.png" alt="Image" className="image" />
+    </div>
     <div className="auth-wrapper">
       <div className="auth-inner">
         <form onSubmit={handleSubmit}>
-          <h3>Sign In</h3>
+          <h3>Log In</h3>
+          <p>Patient Demographics</p>
 
           <div className="margin">
             <label>Email address</label>
@@ -83,6 +88,7 @@ export default function Login() {
           </p>
         </form>
       </div>
+    </div>
     </div>
   );
 }

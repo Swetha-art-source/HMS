@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #1c8ef9 !important;
+  background: #ffffff !important;
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -17,6 +17,7 @@ h3,
 h4,
 h5,
 h6,
+p,
 label,
 span {
   font-weight: 500;
@@ -31,8 +32,19 @@ html,
   width: 100%;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.image {
+  
+  border-radius: 15px;
+}
+
 .navbar-light {
-  background-color: #ffffff;
+  background-color: #ffffff ;
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
 }
 
@@ -52,10 +64,9 @@ html,
 }
 
 .auth-inner {
-  width: 450px;
+  width: 100%;
   margin: auto;
-  background: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  background: transparent;
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
   transition: all 0.3s;
@@ -75,22 +86,6 @@ html,
   margin: 0;
   line-height: 1;
   padding-bottom: 20px;
-}
-
-.custom-control-input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.custom-control-input:checked ~ .custom-control-label::before {
-  color: #fff;
-  border-color: #007bff;
-  background-color: #007bff;
-}
-
-.custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #007bff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .custom-control-label {
@@ -135,7 +130,7 @@ td {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  
 }
 
 .custom-btn-primary:hover {
@@ -177,4 +172,44 @@ td {
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+  }
+
+  .image {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  .custom-form-container {
+    margin-top: 20px;
+  }
+
+  .auth-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+
+  .auth-inner {
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  .custom-form-control {
+    margin-bottom: 15px;
+  }
+
+  .custom-btn-primary {
+    width: 100%;
+  }
 }

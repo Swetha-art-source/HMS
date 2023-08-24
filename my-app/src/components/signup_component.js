@@ -75,6 +75,10 @@ export default function SignUp() {
   };
 
   return (
+    <div className="container">    
+    <div className="image">
+      <img src="https://res.cloudinary.com/dusm4h6cn/image/upload/v1692860408/Screenshot_2023-08-24_122931_vbhmfx.png" alt="Image" />
+    </div>
     <div className="auth-wrapper">
       <div className="auth-inner">
         <form onSubmit={handleSubmit}>
@@ -260,5 +264,7 @@ export default function SignUp() {
         </form>
       </div>
     </div>
+    </div>
+
   );
 }
