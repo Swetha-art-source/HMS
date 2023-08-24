@@ -40,27 +40,27 @@ export default function Login() {
         <form onSubmit={handleSubmit}>
           <h3>Sign In</h3>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Email address</label>
             <input
               type="email"
-              className="form-control"
+              className="custom-form-control"
               placeholder="Enter email"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Password</label>
             <input
               type="password"
-              className="form-control"
+              className="custom-form-control"
               placeholder="Enter password"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <div className="custom-control custom-checkbox">
               <input
                 type="checkbox"
@@ -73,12 +73,12 @@ export default function Login() {
             </div>
           </div>
 
-          <div className="d-grid">
+          <div className="custom-d-grid">
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
           </div>
-          <p className="forgot-password text-right">
+          <p className="forgot-password">
             <a href="/sign-up">Sign Up</a>
           </p>
         </form>

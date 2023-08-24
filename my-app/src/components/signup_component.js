@@ -80,11 +80,11 @@ export default function SignUp() {
         <form onSubmit={handleSubmit}>
           <h3>Sign Up</h3>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>First Name <span className="required">*</span></label>
             <input
               type="text"
-              className="form-control"
+              className="custom-form-control"
               placeholder="Enter your name"
               value={firstName}
               onChange={(e) => setfirstName(e.target.value)}
@@ -92,11 +92,11 @@ export default function SignUp() {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Last Name <span className="required">*</span></label>
             <input
               type="text"
-              className="form-control"
+              className="custom-form-control"
               placeholder="Enter your name"
               value={lastName}
               onChange={(e) => setlastName(e.target.value)}
@@ -104,11 +104,11 @@ export default function SignUp() {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Email address <span className="required">*</span></label>
             <input
               type="email"
-              className="form-control"
+              className="custom-form-control"
               placeholder="Enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -116,11 +116,11 @@ export default function SignUp() {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Password <span className="required">*</span></label>
             <input
               type="password"
-              className="form-control"
+              className="custom-form-control"
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -128,11 +128,11 @@ export default function SignUp() {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Confirm Password <span className="required">*</span></label>
             <input
               type="password"
-              className="form-control"
+              className="custom-form-control"
               placeholder="Confirm password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
@@ -140,7 +140,7 @@ export default function SignUp() {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Date of Birth <span className="required">*</span></label>
             <input
               type="date"
@@ -151,10 +151,10 @@ export default function SignUp() {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Gender <span className="required">*</span></label>
             <select
-              className="form-control"
+              className="custom-form-control"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
               required
@@ -166,11 +166,11 @@ export default function SignUp() {
             </select>
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Contact Number <span className="required">*</span></label>
             <input
               type="tel"
-              className="form-control"
+              className="custom-form-control"
               placeholder="Enter contact number"
               value={contactNumber}
               onChange={(e) => setContactNumber(e.target.value)}
@@ -178,10 +178,10 @@ export default function SignUp() {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Address <span className="required">*</span></label>
             <textarea
-              className="form-control"
+              className="custom-form-control"
               placeholder="Enter address"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -189,11 +189,11 @@ export default function SignUp() {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Emergency Contact <span className="required">*</span></label>
             <input
               type="tel"
-              className="form-control"
+              className="custom-form-control"
               placeholder="Enter emergency contact"
               value={emergencyContact}
               onChange={(e) => setEmergencyContact(e.target.value)}
@@ -201,10 +201,10 @@ export default function SignUp() {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Blood Group <span className="required">*</span></label>
             <select
-              className="form-control"
+              className="custom-form-control"
               value={bloodGroup}
               onChange={(e) => setBloodGroup(e.target.value)}
               required
@@ -221,27 +221,27 @@ export default function SignUp() {
             </select>
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Allergies</label>
             <textarea
-              className="form-control"
+              className="custom-form-control"
               placeholder="Enter allergies"
               value={allergies}
               onChange={(e) => setAllergies(e.target.value)}
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>Medical History</label>
             <input
               type="file"
-              className="form-control"
+              className="custom-form-control"
               accept=".pdf,.doc,.docx"
               onChange={(e) => setMedicalHistoryFile(e.target.files[0])}
             />
           </div>
 
-          <div className="mb-3">
+          <div className="margin">
             <label>CAPTCHA</label>
             <ReCAPTCHA
               sitekey="your-recaptcha-site-key"
@@ -249,8 +249,8 @@ export default function SignUp() {
             />
           </div>
 
-          <div className="d-grid">
-            <button type="submit" className="btn btn-primary">
+          <div className="custom-d-grid">
+            <button type="submit" className="custom-btn-primary">
               Sign Up
             </button>
           </div>
